@@ -2,11 +2,11 @@
   <header class='app-header'>
     <div class="container">
       <h1 class="logo">
-        <RouterLink to="/">小兔鲜</RouterLink>
+        <router-link to="/">小兔鲜</router-link>
       </h1>
       <ul class="navs">
         <li class="home">
-          <RouterLink to="/">首页</RouterLink>
+          <router-link to="/">首页</router-link>
         </li>
         <li><a href="#">美食</a></li>
         <li><a href="#">餐厨</a></li>
