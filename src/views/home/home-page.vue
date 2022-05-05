@@ -1,5 +1,5 @@
 <template>
-  xtx-home-page
+  home-page
 </template>
 
 <script setup>

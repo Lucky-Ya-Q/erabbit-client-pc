@@ -7,7 +7,7 @@ const routes = [
     children: [
       {
         path: '/',
-        component: () => import('@/views/home/xtx-home-page')
+        component: () => import('@/views/home/home-page')
       }
     ]
   }

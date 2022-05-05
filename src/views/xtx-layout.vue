@@ -1,5 +1,5 @@
 <template>
-  <nav>顶部通栏</nav>
+  <app-topnav></app-topnav>
   <header>头部</header>
   <main>
     <!-- 二级路由 -->
@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-
+import AppTopnav from '@/components/app-topnav'
 </script>
 
 <style scoped lang="less">
