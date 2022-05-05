@@ -12,6 +12,10 @@
 import AppTopnav from '@/components/app-topnav'
 import AppHeader from '@/components/app-header'
 import AppFooter from '@/components/app-footer'
+import { useStore } from 'vuex'
+
+const store = useStore()
+store.dispatch('category/getList')
 </script>
 
 <style scoped lang="less">
