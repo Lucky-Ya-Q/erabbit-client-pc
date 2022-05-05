@@ -8,6 +8,14 @@ const routes = [
       {
         path: '/',
         component: () => import('@/views/home/home-page')
+      },
+      {
+        path: '/category/:id',
+        component: () => import('@/views/category/top-category')
+      },
+      {
+        path: '/category/sub/:id',
+        component: () => import('@/views/category/sub-category')
       }
     ]
   }

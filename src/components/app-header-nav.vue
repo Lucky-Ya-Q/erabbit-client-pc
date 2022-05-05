@@ -4,11 +4,11 @@
       <router-link to="/">首页</router-link>
     </li>
     <li v-for="item in list" :key="item.id">
-      <router-link to="/">{{ item.name }}</router-link>
+      <router-link :to="`/category/${item.id}`">{{ item.name }}</router-link>
       <div class="layer">
         <ul>
           <li v-for="sub in item.children" :key="sub.id">
-            <router-link to="/">
+            <router-link :to="`/category/sub/${sub.id}`">
               <img :src="sub.picture" alt="">
               <p>{{ sub.name }}</p>
             </router-link>
