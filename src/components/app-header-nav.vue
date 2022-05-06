@@ -3,12 +3,12 @@
     <li class="home">
       <router-link to="/">首页</router-link>
     </li>
-    <li v-for="item in list" :key="item.id">
-      <router-link :to="`/category/${item.id}`">{{ item.name }}</router-link>
-      <div class="layer">
+    <li v-for="item in list" :key="item.id" @mouseenter="show(item)" @mouseleave="hide(item)">
+      <router-link :to="`/category/${item.id}`" @click="hide(item)">{{ item.name }}</router-link>
+      <div class="layer" :class="{open:item.open}">
         <ul>
           <li v-for="sub in item.children" :key="sub.id">
-            <router-link :to="`/category/sub/${sub.id}`">
+            <router-link :to="`/category/sub/${sub.id}`" @click="hide(item)">
               <img :src="sub.picture" alt="">
               <p>{{ sub.name }}</p>
             </router-link>
@@ -27,6 +27,14 @@ const store = useStore()
 const list = computed(() => {
   return store.state.category.list
 })
+
+function show (item) {
+  store.commit('category/show', item)
+}
+
+function hide (item) {
+  store.commit('category/hide', item)
+}
 </script>
 
 <style scoped lang="less">
@@ -57,8 +65,10 @@ const list = computed(() => {
       }
 
       > .layer {
-        height: 132px;
-        opacity: 1;
+        &.open {
+          height: 132px;
+          opacity: 1;
+        }
       }
     }
   }
