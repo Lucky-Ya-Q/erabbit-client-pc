@@ -1,7 +1,8 @@
 <template>
-  <div class="home-category">
+  <div class="home-category" @mouseleave="categoryId=''">
     <ul class="menu">
-      <li v-for="item in menuList" :key="item.id" @mouseenter="categoryId=item.id">
+      <li :class="{active:categoryId===item.id}" v-for="item in menuList" :key="item.id"
+          @mouseenter="categoryId=item.id">
         <router-link :to="`/category/${item.id}`">{{ item.name }}</router-link>
         <template v-if="item.children">
           <router-link
@@ -78,7 +79,7 @@ const currCategory = computed(() => {
       height: 50px;
       line-height: 50px;
 
-      &:hover {
+      &.active {
         background: @xtxColor;
       }
 
