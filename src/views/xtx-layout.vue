@@ -1,5 +1,6 @@
 <template>
   <app-topnav></app-topnav>
+  <app-header-sticky></app-header-sticky>
   <app-header></app-header>
   <main class="app-body">
     <!-- 二级路由 -->
@@ -13,6 +14,7 @@ import AppTopnav from '@/components/app-topnav'
 import AppHeader from '@/components/app-header'
 import AppFooter from '@/components/app-footer'
 import { useStore } from 'vuex'
+import AppHeaderSticky from '@/components/app-header-sticky'
 
 const store = useStore()
 store.dispatch('category/getList')

@@ -4,7 +4,10 @@ import { findAllCategory } from '@/api/category'
 export default {
   namespaced: true,
   state: () => ({
-    list: topCategory.map(item => ({ name: item }))
+    list: topCategory.map((item, index) => ({
+      id: index,
+      name: item
+    }))
   }),
   mutations: {
     setList (state, headCategory) {
