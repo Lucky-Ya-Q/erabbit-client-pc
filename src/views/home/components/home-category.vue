@@ -12,11 +12,17 @@
             {{ sub.name }}
           </router-link>
         </template>
+        <template v-else>
+          <xtx-skeleton width="60px" height="18px" animated="fade" backgroundColor="rgba(255,255,255,0.2)"
+                        style="margin-right:5px"></xtx-skeleton>
+          <xtx-skeleton width="50px" height="18px" animated="fade"
+                        backgroundColor="rgba(255,255,255,0.2)"></xtx-skeleton>
+        </template>
       </li>
     </ul>
     <!-- 弹层 -->
     <div class="layer">
-      <h4>分类推荐 <small>根据您的购买或浏览记录推荐</small></h4>
+      <h4 v-if="currCategory">{{ currCategory.id === 'brand' ? '品牌' : '分类' }}推荐 <small>根据您的购买或浏览记录推荐</small></h4>
       <ul v-if="currCategory && currCategory.goods">
         <li v-for="item in currCategory.goods" :key="item.id">
           <router-link to="/">
@@ -29,6 +35,18 @@
           </router-link>
         </li>
       </ul>
+      <ul v-if="currCategory && currCategory.brands">
+        <li class="brand" v-for="item in currCategory.brands" :key="item.id">
+          <router-link to="/">
+            <img :src="item.picture" alt="">
+            <div class="info">
+              <p class="place"><i class="iconfont icon-dingwei"></i>{{ item.place }}</p>
+              <p class="name ellipsis">{{ item.name }}</p>
+              <p class="desc ellipsis-2">{{ item.desc }}</p>
+            </div>
+          </router-link>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -36,6 +54,7 @@
 <script setup>
 import { useStore } from 'vuex'
 import { computed, reactive, ref } from 'vue'
+import { findBrand } from '@/api/home'
 
 const brand = reactive({
   id: 'brand',
@@ -43,7 +62,11 @@ const brand = reactive({
   children: [{
     id: 'brand-chilren',
     name: '品牌推荐'
-  }]
+  }],
+  brands: []
+})
+findBrand(6).then(data => {
+  brand.brands = data.result
 })
 const store = useStore()
 const menuList = computed(() => {
@@ -169,6 +192,29 @@ const currCategory = computed(() => {
               i {
                 font-size: 16px;
               }
+            }
+          }
+        }
+      }
+
+      li.brand {
+        height: 180px;
+
+        a {
+          align-items: flex-start;
+
+          img {
+            width: 120px;
+            height: 160px;
+          }
+
+          .info {
+            p {
+              margin-top: 8px;
+            }
+
+            .place {
+              color: #999;
             }
           }
         }
