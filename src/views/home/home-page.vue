@@ -4,6 +4,8 @@
       <div class="container">
         <!-- 左侧分类 -->
         <home-category></home-category>
+        <!-- 轮播图 -->
+        <home-banner></home-banner>
       </div>
     </div>
   </div>
@@ -11,6 +13,7 @@
 
 <script setup>
 import HomeCategory from '@/views/home/components/home-category'
+import HomeBanner from '@/views/home/components/home-banner'
 </script>
 
 <style scoped lang="less">
