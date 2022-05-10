@@ -102,7 +102,7 @@ const currCategory = computed(() => {
       height: 50px;
       line-height: 50px;
 
-      &:hover, &.active {
+      &.active {
         background: @xtxColor;
       }
 
