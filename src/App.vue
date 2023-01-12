@@ -1,5 +1,14 @@
-<template>app</template>
+<template>
+  <app-topnav></app-topnav>
+</template>
 
-<script setup lang="ts"></script>
+<script>
+import { defineComponent } from 'vue'
+import AppTopnav from '@/components/app-topnav.vue'
 
-<style scoped></style>
+export default defineComponent({
+  components: { AppTopnav }
+})
+</script>
+
+<style scoped lang="less"></style>
