@@ -1,6 +1,5 @@
 <template>
-  <!-- 一级路由 -->
-  <router-view></router-view>
+  <div class="xtx-home-page">首页</div>
 </template>
 
 <script setup lang="ts"></script>
