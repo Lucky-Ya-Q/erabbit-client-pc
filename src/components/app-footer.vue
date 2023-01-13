@@ -19,7 +19,7 @@
           <dd class="download">
             <span>扫描二维码</span>
             <span>立马下载APP</span>
-            <a href="#">下载页面</a>
+            <a href="javascript:void(0);">下载页面</a>
           </dd>
         </dl>
         <dl>
@@ -32,15 +32,15 @@
     <div class="extra">
       <div class="container">
         <div class="slogan">
-          <a href="#">
+          <a href="javascript:void(0);">
             <i class="iconfont icon-footer01"></i>
             <span>价格亲民</span>
           </a>
-          <a href="#">
+          <a href="javascript:void(0);">
             <i class="iconfont icon-footer02"></i>
             <span>物流快捷</span>
           </a>
-          <a href="#">
+          <a href="javascript:void(0);">
             <i class="iconfont icon-footer03"></i>
             <span>品质新鲜</span>
           </a>
@@ -48,13 +48,13 @@
         <!-- 版权信息 -->
         <div class="copyright">
           <p>
-            <a href="#">关于我们</a>
-            <a href="#">帮助中心</a>
-            <a href="#">售后服务</a>
-            <a href="#">配送与验收</a>
-            <a href="#">商务合作</a>
-            <a href="#">搜索推荐</a>
-            <a href="#">友情链接</a>
+            <a href="javascript:void(0);">关于我们</a>
+            <a href="javascript:void(0);">帮助中心</a>
+            <a href="javascript:void(0);">售后服务</a>
+            <a href="javascript:void(0);">配送与验收</a>
+            <a href="javascript:void(0);">商务合作</a>
+            <a href="javascript:void(0);">搜索推荐</a>
+            <a href="javascript:void(0);">友情链接</a>
           </p>
           <p>CopyRight © 小兔鲜儿</p>
         </div>

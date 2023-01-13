@@ -3,17 +3,17 @@
     <div class="container">
       <ul>
         <li>
-          <a href="#"><i class="iconfont icon-user"></i>周杰伦</a>
+          <a href="javascript:void(0);"><i class="iconfont icon-user"></i>周杰伦</a>
         </li>
-        <li><a href="#">退出登录</a></li>
-        <li><a href="#">请先登录</a></li>
-        <li><a href="#">免费注册</a></li>
-        <li><a href="#">我的订单</a></li>
-        <li><a href="#">会员中心</a></li>
-        <li><a href="#">帮助中心</a></li>
-        <li><a href="#">关于我们</a></li>
+        <li><a href="javascript:void(0);">退出登录</a></li>
+        <li><a href="javascript:void(0);">请先登录</a></li>
+        <li><a href="javascript:void(0);">免费注册</a></li>
+        <li><a href="javascript:void(0);">我的订单</a></li>
+        <li><a href="javascript:void(0);">会员中心</a></li>
+        <li><a href="javascript:void(0);">帮助中心</a></li>
+        <li><a href="javascript:void(0);">关于我们</a></li>
         <li>
-          <a href="#"><i class="iconfont icon-phone"></i>手机版</a>
+          <a href="javascript:void(0);"><i class="iconfont icon-phone"></i>手机版</a>
         </li>
       </ul>
     </div>
